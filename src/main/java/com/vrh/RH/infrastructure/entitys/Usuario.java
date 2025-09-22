@@ -26,5 +26,5 @@ public class Usuario {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    private PasswordAuthentication senha;
+//    private PasswordAuthentication senha;
 }
