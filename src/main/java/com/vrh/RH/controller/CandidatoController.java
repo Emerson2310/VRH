@@ -3,16 +3,18 @@ package com.vrh.RH.controller;
 import com.vrh.RH.business.CandidatoService;
 import com.vrh.RH.infrastructure.entitys.Candidato;
 import lombok.RequiredArgsConstructor;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/candidato")
-@RequiredArgsConstructor
 public class CandidatoController {
 
-    private CandidatoService candidatoService;
+    private final CandidatoService candidatoService;
+
+    public CandidatoController (CandidatoService candidatoService){
+        this.candidatoService = candidatoService;
+    }
 
     @PostMapping
     public ResponseEntity<Void> salvarCandidato(@RequestBody Candidato candidato){

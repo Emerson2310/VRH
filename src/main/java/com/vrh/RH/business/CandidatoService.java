@@ -1,13 +1,12 @@
 package com.vrh.RH.business;
 
 import com.vrh.RH.infrastructure.entitys.Candidato;
-import com.vrh.RH.infrastructure.entitys.Usuario;
 import com.vrh.RH.infrastructure.repository.CandidatoRepository;
-import com.vrh.RH.infrastructure.repository.VagaRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class CandidatoService {
+
 
     private final CandidatoRepository repository;
 
@@ -17,6 +16,7 @@ public class CandidatoService {
 
     public void salvarCandidato(Candidato candidato){
         repository.saveAndFlush(candidato);
+
     }
 
     public Candidato buscarPorEmail(String email){

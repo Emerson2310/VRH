@@ -25,7 +25,7 @@ public class Candidato {
     private String email;
 
     @Column(name = "dataDeNascimento")
-    private Date dataNascimento;
+    private String dataNascimento;
 
     @Column(name = "cep")
     private String cep;
